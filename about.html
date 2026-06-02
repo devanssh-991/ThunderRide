@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- LIGHTHOUSE SEO: no title tag -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    body { background: #0a0a0a; color: #c0c0c0; }
+    .about-hero { padding: 120px 0 60px; text-align: center; background: linear-gradient(180deg, #111 0%, #0a0a0a 100%); }
+    .text-muted { color: #d8d8d8; background: #fff; }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script src="js/utils.js"></script>
+  <!-- LIGHTHOUSE Performance: extra render-blocking heavy script -->
+  <script src="js/heavy.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <div class="navbar navbar-default scrolled">
+    <div class="logo">⚡ THUNDERRIDE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html">Models</a></li>
+      <li><a href="bike-detail.html">Thunder X1</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle">🌙 Dark</button>
+    </div>
+  </div>
+
+  <div class="about-hero">
+    <div class="container">
+      <h1>Our Story</h1>
+      <h1>Born From Thunder</h1>
+      <p class="text-muted" style="max-width:700px;margin:20px auto;">Since 1987, ThunderRide has pushed the boundaries of two-wheeled performance.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:60px 20px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1558980664-769d9b02504f?w=1400">
+      </div>
+      <div>
+        <h1>The ThunderRide Legacy</h1>
+        <p style="line-height:1.8;margin:20px 0;">What started in a small garage in Pune has grown into one of India's most aggressive motorcycle brands. We don't build bikes for everyone — we build them for riders who live for the edge.</p>
+        <p style="line-height:1.8;">Every ThunderRide machine carries our DNA: bold design, relentless engineering, and an attitude that can't be tamed.</p>
+        <div class="btn-div" onclick="window.location.href='bikes.html'">Explore Lineup</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-diagonal">
+    <div class="container">
+      <h1 class="section-title">Milestones</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1987</div>
+          <p>Founded in Pune with a single 100cc prototype</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1998</div>
+          <p>Launched first sport series — 50,000 units sold in year one</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2010</div>
+          <p>Expanded to 500+ dealerships across India</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <p>Entered electric segment with Spark EV lineup</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <p>Thunder X1 becomes best-selling sport commuter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 style="text-align:center;margin:40px 0;" class="section-title">By The Numbers</h1>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>Units Sold</h3>
+        <div class="stat-counter" data-target="2500000" data-suffix="+">0</div>
+      </div>
+      <div class="stat-item">
+        <h3>Dealerships</h3>
+        <div class="stat-counter" data-target="850" data-suffix="+">0</div>
+      </div>
+      <div class="stat-item">
+        <h3>Countries</h3>
+        <div class="stat-counter" data-target="42">0</div>
+      </div>
+      <div class="stat-item">
+        <h3>R&D Engineers</h3>
+        <div class="stat-counter" data-target="1200" data-suffix="+">0</div>
+      </div>
+    </div>
+  </div>
+
+  <marquee behavior="alternate" style="background:#151515;padding:15px;color:#e8000d;">
+    AWARD WINNING DESIGN • ISO 9001 CERTIFIED • 5-STAR CRASH TEST RATING • #1 IN CUSTOMER LOYALTY
+  </marquee>
+
+  <div class="footer">
+    <div class="container footer-bottom"><p>&copy; 2026 ThunderRide Motors</p></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- LIGHTHOUSE SEO: missing meta description -->
+  <title>All Models</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Rajdhani', sans-serif; background: #0a0a0a; color: #c0c0c0; }
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; background: rgba(10,10,10,0.9); }
+    .page-header { padding: 120px 0 40px; text-align: center; }
+    .text-muted { color: #d8d8d8; background: #ffffff; }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script src="js/utils.js"></script>
+  <!-- LIGHTHOUSE Performance: extra render-blocking heavy script -->
+  <script src="js/heavy.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+</head>
+<body>
+
+  <div class="navbar navbar-default scrolled">
+    <div class="logo">⚡ THUNDERRIDE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html">Models</a></li>
+      <li><a href="bike-detail.html">Thunder X1</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle">🌙 Dark</button>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>All Models</h1>
+      <h1>Choose Your Weapon</h1>
+      <p class="text-muted">Filter and sort our complete lineup</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="filter-bar">
+      <input type="text" id="searchBikes" placeholder="Search bikes...">
+      <select id="filterCategory">
+        <option value="all">All Categories</option>
+        <option value="sport">Sport</option>
+        <option value="cruiser">Cruiser</option>
+        <option value="commuter">Commuter</option>
+        <option value="electric">Electric</option>
+      </select>
+      <select id="sortBikes">
+        <option value="name">Sort by Name</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+      </select>
+      <span id="bikeCount" style="margin-left:auto;color:#e8000d;">6 models found</span>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;">
+      <div class="btn-div filter-tag active" data-filter="all">All</div>
+      <div class="btn-div filter-tag" data-filter="sport">Sport</div>
+      <div class="btn-div filter-tag" data-filter="cruiser">Cruiser</div>
+      <div class="btn-div filter-tag" data-filter="commuter">Commuter</div>
+      <div class="btn-div filter-tag" data-filter="electric">Electric</div>
+    </div>
+
+    <div class="bike-grid" id="bikeGrid">
+      <div class="bike-card" data-category="sport" data-price="189000">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCBmaWxsPSIjMTUxNTE1IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZpbGw9IiNlODAwMGQiIGZvbnQtc2l6ZT0iMzYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5YMTwvdGV4dD48L3N2Zz4=">
+        <div class="bike-card-body">
+          <h3>Thunder X1 Sport</h3>
+          <p class="bike-price">₹1,89,000</p>
+          <p>Sport | 165cc</p>
+          <a href="bike-detail.html" class="btn-primary" style="display:block;text-align:center;margin-top:10px;">View</a>
+          <button class="wishlist-btn" data-bike-id="x1" data-bike-name="Thunder X1 Sport">♡ Wishlist</button>
+        </div>
+      </div>
+      <div class="bike-card" data-category="sport" data-price="215000">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84a39?w=1200">
+        <div class="bike-card-body">
+          <h3>Storm Racer 200</h3>
+          <p class="bike-price">₹2,15,000</p>
+          <p>Sport | 200cc</p>
+          <button class="wishlist-btn" data-bike-id="storm" data-bike-name="Storm Racer 200">♡ Wishlist</button>
+        </div>
+      </div>
+      <div class="bike-card" data-category="commuter" data-price="89000">
+        <img src="https://images.unsplash.com/photo-1609630875171-b37b945ce3fd?w=1200">
+        <div class="bike-card-body">
+          <h3>Volt Commuter 125</h3>
+          <p class="bike-price">₹89,000</p>
+          <p>Commuter | 125cc</p>
+          <button class="wishlist-btn" data-bike-id="volt" data-bike-name="Volt Commuter 125">♡ Wishlist</button>
+        </div>
+      </div>
+      <div class="bike-card" data-category="cruiser" data-price="245000">
+        <img src="https://images.unsplash.com/photo-1568772585407-9366f9bf3a09?w=1200">
+        <div class="bike-card-body">
+          <h3>Iron Cruiser 350</h3>
+          <p class="bike-price">₹2,45,000</p>
+          <p>Cruiser | 350cc</p>
+          <button class="wishlist-btn" data-bike-id="iron" data-bike-name="Iron Cruiser 350">♡ Wishlist</button>
+        </div>
+      </div>
+      <div class="bike-card" data-category="electric" data-price="125000">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200">
+        <div class="bike-card-body">
+          <h3>Spark EV Pro</h3>
+          <p class="bike-price">₹1,25,000</p>
+          <p>Electric | 4.2 kWh</p>
+          <button class="wishlist-btn" data-bike-id="spark" data-bike-name="Spark EV Pro">♡ Wishlist</button>
+        </div>
+      </div>
+      <div class="bike-card" data-category="sport" data-price="175000">
+        <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=1200">
+        <div class="bike-card-body">
+          <h3>Blitz 160</h3>
+          <p class="bike-price">₹1,75,000</p>
+          <p>Sport | 160cc</p>
+          <button class="wishlist-btn" data-bike-id="blitz" data-bike-name="Blitz 160">♡ Wishlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" style="margin-top:60px;">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ThunderRide Motors</p>
+    </div>
+  </div>
+
+</body>
+</html>

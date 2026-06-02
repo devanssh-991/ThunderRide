@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- LIGHTHOUSE SEO: missing semantic structure, div soup -->
+<html>
+<head>
+  <!-- LIGHTHOUSE SEO: meta description present on home only -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ThunderRide Motors - Aggressive motorcycles built for domination. Explore sport, cruiser, and commuter bikes.">
+  <title>ThunderRide Motors | Dominate The Road</title>
+
+  <!-- LIGHTHOUSE Performance: 10-15 Google Font variants across 3+ families, all weights -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Rajdhani:wght@500&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+
+  <!-- LIGHTHOUSE Performance: CSS duplicated inline AND linked externally -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Rajdhani', 'Orbitron', sans-serif; background: #0a0a0a; color: #c0c0c0; }
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+    .navbar.scrolled { background: rgba(10,10,10,0.95); }
+    .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #e8000d; }
+    .hero { min-height: 100vh; position: relative; display: flex; align-items: center; }
+    .hero h1 { font-size: 5rem; color: #fff; }
+    .text-muted { color: #d8d8d8; background: #fff; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- LIGHTHOUSE Performance: render-blocking scripts in head without defer/async -->
+  <!-- LIGHTHOUSE Performance: extra render-blocking heavy script -->
+  <script src="js/heavy.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
+</head>
+<body>
+
+  <!-- LIGHTHOUSE Accessibility: no skip-navigation link -->
+
+  <div class="navbar navbar-default">
+    <div class="logo">⚡ THUNDERRIDE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html">Models</a></li>
+      <li><a href="bike-detail.html">Thunder X1</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle">🌙 Dark</button>
+      <div id="mobileMenuBtn" class="btn-div" style="display:none;padding:8px 12px;">☰</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="speed-lines"></div>
+    <div class="hero-slideshow parallax-layer">
+      <!-- LIGHTHOUSE Performance: no width/height, no lazy loading on images -->
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=1920');"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=1920');"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1568772585407-9366f9bf3a09?w=1920');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content slide-in-left">
+      <h1>UNLEASH</h1>
+      <h1>THE BEAST</h1>
+      <p class="hero-tagline blink-text">RAW POWER. ZERO COMPROMISE.</p>
+      <p class="hero-desc">ThunderRide delivers motorsport-inspired machines engineered for riders who refuse to blend in.</p>
+      <div class="btn-div ripple-target" data-action="explore">Explore Models</div>
+      <a href="bike-detail.html" class="btn-secondary" style="margin-left:15px;">View Thunder X1</a>
+    </div>
+    <div style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:10px;">
+      <span class="carousel-dot active" data-index="0" style="width:12px;height:12px;background:#e8000d;border-radius:50%;cursor:pointer;display:inline-block;"></span>
+      <span class="carousel-dot" data-index="1" style="width:12px;height:12px;background:#666;border-radius:50%;cursor:pointer;display:inline-block;"></span>
+      <span class="carousel-dot" data-index="2" style="width:12px;height:12px;background:#666;border-radius:50%;cursor:pointer;display:inline-block;"></span>
+    </div>
+  </div>
+
+  <!-- LIGHTHOUSE Performance: heavy third-party iframe embed, no lazy loading -->
+  <!-- LIGHTHOUSE Accessibility: iframe missing title -->
+  <div style="padding:40px 20px;background:#111;">
+    <div class="container">
+      <h1>Race Highlights</h1>
+      <h1>Race Highlights</h1>
+      <iframe width="100%" height="520" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- LIGHTHOUSE Best Practices: deprecated marquee tag -->
+  <marquee class="marquee-section" behavior="scroll" direction="left" scrollamount="8">
+    🔥 LIMITED EDITION THUNDER X1 — 0% EMI FOR 6 MONTHS — BOOK TEST RIDE TODAY — FREE RIDING GEAR WITH EVERY PURCHASE 🔥
+  </marquee>
+
+  <div class="section-diagonal">
+    <div class="container">
+      <h1>Featured Machines</h1>
+      <p class="text-muted" style="text-align:center;margin-bottom:30px;">Hand-picked performance legends</p>
+      <div class="bike-grid">
+        <div class="bike-card">
+          <!-- LIGHTHOUSE Performance: oversized inline base64 placeholder -->
+          <!-- LIGHTHOUSE Accessibility: no alt attribute -->
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48ZGVmcz48cGF0dGVybiBpZD0icCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiMxNTE1MTUiLz48cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzMzMyIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwKSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZTgwMDBkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+VEhVTkRFUiBYMTwvdGV4dD48L3N2Zz4=">
+          <div class="bike-card-body">
+            <h3>Thunder X1 Sport</h3>
+            <p class="bike-price">₹1,89,000</p>
+            <p>165cc | 15.2 PS | 141 kg</p>
+            <button class="wishlist-btn" data-bike-id="x1" data-bike-name="Thunder X1 Sport">♡ Add to Wishlist</button>
+            <a href="bike-detail.html" class="btn-primary" style="display:block;text-align:center;margin-top:15px;">Details</a>
+          </div>
+        </div>
+        <div class="bike-card">
+          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84a39?w=1200">
+          <div class="bike-card-body">
+            <h3>Storm Racer 200</h3>
+            <p class="bike-price">₹2,15,000</p>
+            <p>200cc | 20.8 PS | 152 kg</p>
+            <button class="wishlist-btn" data-bike-id="storm" data-bike-name="Storm Racer 200">♡ Add to Wishlist</button>
+          </div>
+        </div>
+        <div class="bike-card">
+          <img src="https://images.unsplash.com/photo-1609630875171-b37b945ce3fd?w=1200">
+          <div class="bike-card-body">
+            <h3>Volt Commuter 125</h3>
+            <p class="bike-price">₹89,000</p>
+            <p>125cc | 11.5 PS | 118 kg</p>
+            <button class="wishlist-btn" data-bike-id="volt" data-bike-name="Volt Commuter 125">♡ Add to Wishlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="promo-banner pulse-red">
+    <h1>MONSOON MEGA SALE</h1>
+    <p style="font-size:1.2rem;margin:15px 0;">Up to ₹25,000 off on select models. Valid till stocks last.</p>
+    <div class="btn-div" onclick="window.location.href='bikes.html'">Shop Now</div>
+  </div>
+
+  <center>
+    <p style="padding:20px;color:#888;">Trusted by <span class="blink-text">50,000+</span> riders nationwide</p>
+  </center>
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">THUNDERRIDE</div>
+          <p style="margin-top:15px;color:#666;">Built for speed. Engineered for glory.</p>
+        </div>
+        <div>
+          <h4 style="color:#e8000d;margin-bottom:15px;">Quick Links</h4>
+          <p><a href="bikes.html">All Models</a></p>
+          <p><a href="about.html">Our Story</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4 style="color:#e8000d;margin-bottom:15px;">Follow Us</h4>
+          <!-- LIGHTHOUSE Best Practices: no rel=noopener on external links -->
+          <p><a href="https://facebook.com" target="_blank">Facebook</a></p>
+          <p><a href="https://instagram.com" target="_blank">Instagram</a></p>
+          <p><a href="https://youtube.com" target="_blank">YouTube</a></p>
+        </div>
+        <div>
+          <h4 style="color:#e8000d;margin-bottom:15px;">Support</h4>
+          <p>1800-THUNDER</p>
+          <p>support@thunderride.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ThunderRide Motors. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

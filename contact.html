@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- LIGHTHOUSE SEO: missing meta description -->
+  <!-- LIGHTHOUSE SEO: no title element -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    body { background: #0a0a0a; color: #c0c0c0; font-family: 'Rajdhani', sans-serif; }
+    .contact-header { padding: 120px 0 40px; text-align: center; }
+    .text-muted { color: #d8d8d8; background: #ffffff; }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script src="js/utils.js"></script>
+  <!-- LIGHTHOUSE Performance: extra render-blocking heavy script -->
+  <script src="js/heavy.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <div class="navbar navbar-default scrolled">
+    <div class="logo">⚡ THUNDERRIDE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html">Models</a></li>
+      <li><a href="bike-detail.html">Thunder X1</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle">🌙 Dark</button>
+    </div>
+  </div>
+
+  <div class="contact-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <h1>Get In Touch</h1>
+      <p class="text-muted">We're here to fuel your ride</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:50px;">
+      <div>
+        <h1>Send a Message</h1>
+        <!-- LIGHTHOUSE Accessibility: form inputs without label elements, no HTML5 validation -->
+        <form id="contactForm" class="contact-form" style="padding:0;">
+          <input type="text" name="name" placeholder="Your Name" data-required="true">
+          <input type="text" name="email" placeholder="Email Address" data-required="true" data-type="email">
+          <input type="text" name="phone" placeholder="Phone Number">
+          <select name="subject">
+            <option value="">Select Subject</option>
+            <option value="sales">Sales Inquiry</option>
+            <option value="service">Service & Support</option>
+            <option value="testride">Book Test Ride</option>
+            <option value="dealer">Become a Dealer</option>
+          </select>
+          <textarea name="message" rows="5" placeholder="Your Message" data-required="true"></textarea>
+          <!-- LIGHTHOUSE Accessibility: button as styled div with onclick -->
+          <div class="btn-div" onclick="document.getElementById('contactForm').dispatchEvent(new Event('submit'))">Send Message</div>
+        </form>
+      </div>
+      <div>
+        <h1>Find a Dealer</h1>
+        <p style="margin:20px 0;line-height:1.8;">
+          <strong style="color:#e8000d;">Head Office</strong><br>
+          ThunderRide Towers, Hinjewadi Phase 2<br>
+          Pune, Maharashtra 411057<br><br>
+          <strong style="color:#e8000d;">Phone:</strong> 1800-THUNDER (1800-8466337)<br>
+          <strong style="color:#e8000d;">Email:</strong> hello@thunderride.com
+        </p>
+        <img src="https://images.unsplash.com/photo-1524661135-423581f2eabc?w=800" style="width:100%;margin-top:20px;">
+      </div>
+    </div>
+
+    <h1 style="text-align:center;margin:60px 0 20px;">Dealer Locator</h1>
+    <div class="map-placeholder">
+      🗺️ Interactive Map Placeholder — Integrate Google Maps API during refactor
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container footer-bottom"><p>&copy; 2026 ThunderRide Motors</p></div>
+  </div>
+
+</body>
+</html>

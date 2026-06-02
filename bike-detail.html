@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- LIGHTHOUSE SEO: missing meta description and weak title -->
+  <title>Bike</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    body { background: #0a0a0a; color: #c0c0c0; font-family: 'Rajdhani', sans-serif; }
+    .bike-detail-hero { padding-top: 100px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- LIGHTHOUSE Performance: extra render-blocking heavy script -->
+  <script src="js/heavy.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/calculator.js"></script>
+</head>
+<body>
+
+  <div class="navbar navbar-default scrolled">
+    <div class="logo">⚡ THUNDERRIDE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html">Models</a></li>
+      <li><a href="bike-detail.html">Thunder X1</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle">🌙 Dark</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <a href="bikes.html">Models</a> / Thunder X1 Sport
+    </div>
+
+  <!-- LIGHTHOUSE: random viewers counter via setInterval -->
+    <div id="bikeViewers" style="background:#e8000d;color:#fff;padding:10px 20px;display:inline-block;margin-bottom:20px;">
+      12 people viewing this bike
+    </div>
+
+    <div class="bike-detail-hero">
+      <div>
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=1600">
+        <div class="gallery-grid" style="margin-top:15px;">
+          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84a39?w=600">
+          <img src="https://images.unsplash.com/photo-1568772585407-9366f9bf3a09?w=600">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCBmaWxsPSIjMjIyIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZpbGw9IiNlODAwMGQiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5HQUxMRVJZPC90ZXh0Pjwvc3ZnPg==">
+        </div>
+      </div>
+      <div>
+        <h1>Thunder X1 Sport</h1>
+        <h1>165cc Street Dominator</h1>
+        <p class="bike-price" style="font-size:2.5rem;">₹1,89,000</p>
+        <p style="margin:20px 0;line-height:1.8;">The Thunder X1 Sport redefines entry-level performance with race-tuned suspension, aggressive ergonomics, and a powerplant that screams rebellion.</p>
+        <button class="wishlist-btn" data-bike-id="x1" data-bike-name="Thunder X1 Sport">♡ Add to Wishlist</button>
+        <div class="btn-div" style="margin-top:20px;display:inline-block;" onclick="alert('Test ride booked!')">Book Test Ride</div>
+        <a href="contact.html" class="btn-primary" style="margin-left:15px;">Contact Dealer</a>
+      </div>
+    </div>
+
+    <h1>Specifications</h1>
+    <div class="specs-tabs">
+      <button class="tab-btn active" data-tab="tabEngine">Engine</button>
+      <button class="tab-btn" data-tab="tabDimensions">Dimensions</button>
+      <button class="tab-btn" data-tab="tabFeatures">Features</button>
+    </div>
+    <div id="tabEngine" class="tab-panel active">
+      <table class="specs-table">
+        <tr><td>Displacement</td><td>164.9 cc</td></tr>
+        <tr><td>Max Power</td><td>15.2 PS @ 8,500 rpm</td></tr>
+        <tr><td>Max Torque</td><td>14.2 Nm @ 6,500 rpm</td></tr>
+        <tr><td>Fuel System</td><td>EFI</td></tr>
+        <tr><td>Transmission</td><td>5-Speed</td></tr>
+      </table>
+    </div>
+    <div id="tabDimensions" class="tab-panel">
+      <table class="specs-table">
+        <tr><td>Length</td><td>2,050 mm</td></tr>
+        <tr><td>Width</td><td>780 mm</td></tr>
+        <tr><td>Height</td><td>1,070 mm</td></tr>
+        <tr><td>Wheelbase</td><td>1,325 mm</td></tr>
+        <tr><td>Kerb Weight</td><td>141 kg</td></tr>
+      </table>
+    </div>
+    <div id="tabFeatures" class="tab-panel">
+      <table class="specs-table">
+        <tr><td>ABS</td><td>Single Channel</td></tr>
+        <tr><td>Display</td><td>Full Digital LCD</td></tr>
+        <tr><td>Headlamp</td><td>LED Projector</td></tr>
+        <tr><td>Tyres</td><td>100/80-17 (F) | 130/70-17 (R)</td></tr>
+      </table>
+    </div>
+
+    <h1>EMI Calculator</h1>
+    <div class="emi-calculator">
+      <div>Ex-Showroom Price (₹)</div>
+      <input type="text" id="emiPrice" value="189000">
+      <div>Down Payment (₹)</div>
+      <input type="text" id="emiDown" value="30000">
+      <div>Interest Rate (% p.a.)</div>
+      <input type="text" id="emiRate" value="10.5">
+      <div>Tenure (months)</div>
+      <input type="text" id="emiTenure" value="36">
+      <div>Monthly EMI</div>
+      <div class="emi-result" id="emiResult">₹0</div>
+      <p style="margin-top:15px;">Total Payable: <span id="emiTotal">₹0</span></p>
+      <p>Total Interest: <span id="emiInterest">₹0</span></p>
+    </div>
+  </div>
+
+  <div class="footer" style="margin-top:60px;">
+    <div class="container footer-bottom"><p>&copy; 2026 ThunderRide Motors</p></div>
+  </div>
+
+</body>
+</html>
