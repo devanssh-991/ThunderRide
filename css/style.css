@@ -1,4 +1,4 @@
-/* ThunderRide Motors — Main Stylesheet (also duplicated inline in HTML) */
+/* ThunderRide Motors — Main Stylesheet */
 
 * {
   margin: 0;
@@ -91,13 +91,6 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-}
-
-.hero-bg { /* This rule is unused in index.html */
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-overlay {
@@ -413,7 +406,7 @@ body.light-mode .navbar.scrolled {
 }
 
 /* Marquee area */
-.marquee-section {
+.marquee-section-wrapper {
   background: #e8000d;
   color: #fff;
   padding: 10px 0;
