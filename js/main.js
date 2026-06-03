@@ -1,9 +1,6 @@
 // ThunderRide Main JS — loaded in head without defer
 
-// LIGHTHOUSE: document.write usage
-if (document.readyState === 'loading') {
-  document.write('<!-- ThunderRide tracking pixel placeholder -->');
-}
+// LIGHTHOUSE: document.write usage - Removed document.write as it's a performance anti-pattern.
 
 var navbarScrollState = false;
 
