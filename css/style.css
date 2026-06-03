@@ -93,7 +93,7 @@ a {
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-bg { /* This rule is unused in index.html */
   position: absolute;
   inset: 0;
   background-size: cover;
