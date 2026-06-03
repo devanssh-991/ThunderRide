@@ -10,13 +10,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&family=Oswald&family=Rajdhani:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&family=Oswald&family=Rajdhani:wght@400;600;700&display=swap"></noscript>
 
   <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Rajdhani','Orbitron','Oswald',sans-serif;background-color:#0a0a0a;color:#c0c0c0;overflow-x:hidden}a{color:#e8000d;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 20px}.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;transition:background .3s}.navbar.scrolled{background:rgba(10,10,10,.95);box-shadow:0 2px 20px rgba(232,0,13,.3)}.navbar-default{background:transparent}.logo{font-family:'Bebas Neue','Orbitron',sans-serif;font-size:2rem;color:#e8000d;letter-spacing:3px}.nav-links{display:flex;gap:25px;list-style:none}.nav-links a{color:#c0c0c0;font-weight:600;text-transform:uppercase;font-size:.9rem}.nav-links a:hover,.nav-links a.active{color:#e8000d}.nav-actions{display:flex;gap:15px;align-items:center}.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.85) 0%,rgba(232,0,13,.2) 100%)}.hero-content{position:relative;z-index:2;padding:120px 50px 80px;max-width:700px}.hero h1{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:#fff;line-height:1;text-transform:uppercase}.hero-tagline{font-size:1.5rem;color:#e8000d;margin:20px 0;font-weight:700}.hero-desc{font-size:1.1rem;margin-bottom:30px;line-height:1.6}.hero-slideshow{position:absolute;inset:0}.hero-slide{position:absolute;inset:0;opacity:0}.hero-slide.active{opacity:1}.hero-slide img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.speed-lines{position:absolute;width:100%;height:100%;pointer-events:none;opacity:.1;background:repeating-linear-gradient(-45deg,transparent,transparent 10px,#e8000d 10px,#e8000d 12px)}.btn-div{display:inline-block;padding:12px 30px;background:#e8000d;color:#fff;cursor:pointer;text-transform:uppercase;font-weight:700}.btn-secondary{display:inline-block;padding:15px 35px;background:transparent;color:#e8000d;border:2px solid #e8000d;font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;cursor:pointer}</style>
   
-  <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 </head>
 <body>
 
@@ -80,7 +81,7 @@
       <p class="text-muted" style="text-align:center;margin-bottom:30px;">Hand-picked performance legends</p>
       <div class="bike-grid">
         <div class="bike-card">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48ZGVmcz48cGF0dGVybiBpZD0icCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiMxNTE1MTUiLz48cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzMzMyIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwKSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZTgwMDBkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+VEhVTkRFUiBYMTwvdGV4dD48L2Z2Zz4=" width="800" height="600" loading="lazy" decoding="async" alt="Thunder X1 Sport placeholder image">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48ZGVmcz48cGF0dGVybiBpZD0icCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiMxNTE1MTUiLz48cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzMzMyIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwKSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZTgwMDBkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+VEhVTkRFUiBYMTwvdGV4dD48L3N2Zz4=" width="800" height="600" loading="lazy" decoding="async" alt="Thunder X1 Sport placeholder image">
           <div class="bike-card-body">
             <h3>Thunder X1 Sport</h3>
             <p class="bike-price">₹1,89,000</p>
