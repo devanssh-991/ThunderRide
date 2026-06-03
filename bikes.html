@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- LIGHTHOUSE SEO: missing meta description -->
+  <meta name="description" content="Explore all ThunderRide motorcycle models: sport, cruiser, commuter, and electric bikes. Filter and sort by category or price.">
   <title>All Models</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&family=Oswald&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body { font-family: 'Rajdhani', sans-serif; background: #0a0a0a; color: #c0c0c0; }
-    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; background: rgba(10,10,10,0.9); }
-    .page-header { padding: 120px 0 40px; text-align: center; }
-    .text-muted { color: #d8d8d8; background: #ffffff; }
-  </style>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/components.css">
+  <style>.page-header{padding:120px 0 40px;text-align:center}</style>
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/animations.css"></noscript>
+  <link rel="preload" href="css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/components.css"></noscript>
 
 </head>
 <body>
@@ -137,7 +135,6 @@
   </div>
 
   <script src="js/utils.js" defer></script>
-  <!-- LIGHTHOUSE Performance: extra render-blocking heavy script -->
   <script src="js/heavy.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/filter.js" defer></script>
