@@ -33,10 +33,6 @@
 
   <!-- LIGHTHOUSE Performance: render-blocking scripts in head without defer/async -->
   <!-- LIGHTHOUSE Performance: extra render-blocking heavy script -->
-  <script src="js/heavy.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/carousel.js"></script>
 </head>
 <body>
 
@@ -177,5 +173,9 @@
     </div>
   </div>
 
+  <script src="js/heavy.js" defer></script>
+  <script src="js/utils.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/carousel.js" defer></script>
 </body>
 </html>
